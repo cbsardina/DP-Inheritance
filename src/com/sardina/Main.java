@@ -4,14 +4,26 @@ public class Main {
 
     public static void main(String[] args) {
 
-        java.time.LocalDateTime createdAt;
+        EmailNotification emailNotification = new EmailNotification("Java Class", "This is the email body", "Calvin", "calvin@tiy.com");
+        TextNotification textNotification = new TextNotification("Java Assignment", "This is the email body about the java assignment", "Calvin", "Verizon");
+        System.out.println(" --------------------------------- ");
 
-        createdAt = java.time.LocalDateTime.now();
+    //call the transport() method
+        emailNotification.transport();
+        textNotification.transport();
+        System.out.println(" --------------------------------- ");
 
-        System.out.println(createdAt);
+    //protected variable
+        emailNotification.showStatus();
+        textNotification.showStatus();
+        System.out.println(" --------------------------------- ");
 
+    //protected methods
+        System.out.println(textNotification.textPrinter());
+        System.out.println(emailNotification.textPrinter());
+        System.out.println(" --------------------------------- ");
 
-
+    //
 
     }
 }
