@@ -9,6 +9,12 @@ public class Notification {
     private String body;
     protected String status = "Status: Serious.";
 
+  // ===== CONSTRUCTOR =====
+    public Notification(String subject, String body) {
+      this.subject = subject;
+      this.body = body;
+      createdAt = java.time.LocalDateTime.now();
+  }
 
   // ===== METHODS =====
     public void showStatus() {
@@ -16,7 +22,7 @@ public class Notification {
     }
 
     public void transport() {
-        System.out.println("NoTransportException");
+        throw new NoTransportException("A NoTransportException has been thrown!!!");
     }
 
     protected String textPrinter() {
@@ -24,13 +30,7 @@ public class Notification {
     }
 
 
-  // ===== GETTERS + SETTERS =====
-    public Notification(String subject, String body) {
-        this.subject = subject;
-        this.body = body;
-        createdAt = java.time.LocalDateTime.now();
-    }
-
+ // ===== GETTERS & SETTERS =====
     public String getStatus() { return status; }
 
     public void setStatus(java.lang.String status) { this.status = status; }
@@ -42,4 +42,6 @@ public class Notification {
     public String getSubject() { return subject; }
 
     public String getBody() { return body; }
-}
+
+} //end Notification class
+

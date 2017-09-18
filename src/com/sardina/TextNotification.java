@@ -15,9 +15,10 @@ public class TextNotification extends Notification {
 
     public String getSmsProvider() { return smsProvider; }
 
+
+//Override of NoTransportException
     @Override
     public void transport() {
-        System.out.println("TextNotification recipient: " + getRecipient() + " | getSmsProvider: " + getSmsProvider() + " | Created at: " + getCreatedAt() + ".");
+        System.out.println("OVERRIDE of NoTransportException:: TextNotification recipient: " + getRecipient() + " | getSmsProvider: " + getSmsProvider() + " | Created at: " + getCreatedAt() + ".");
     }
 }
-
