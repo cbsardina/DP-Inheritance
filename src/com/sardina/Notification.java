@@ -2,7 +2,7 @@ package com.sardina;
 
 import java.time.LocalDateTime;
 
-public class Notification {
+public abstract class Notification {
 
     private java.time.LocalDateTime createdAt;
     private String subject;
