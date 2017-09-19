@@ -24,8 +24,7 @@ public class Main {
         System.out.println(" --------------------------------- ");
 
     //other objects to override - clone emailNotification & check
-        Object emailNotificationClone = emailNotification.clone(emailNotification);
-        boolean isEqual = emailNotification.equals(emailNotificationClone);
-        System.out.println("Object emailNotification is cloned: " + isEqual);
+        Object emailNotificationClone = emailNotification.clone();
+        System.out.println("Object emailNotification is cloned: " + emailNotification.equals(emailNotificationClone));
     }
 }

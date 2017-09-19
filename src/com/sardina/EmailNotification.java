@@ -48,9 +48,9 @@ public class EmailNotification extends Notification {
         return result;
     }
 
-    protected Object clone(EmailNotification emailNotification) {
-        Object tempObject;
-        tempObject = emailNotification;
-        return tempObject;
+    @Override
+    protected Object clone() {
+        return new EmailNotification(getSubject(), getBody(), getRecipient(), getSmtpProvider());
     }
+
 }
